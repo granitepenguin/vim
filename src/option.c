@@ -1095,7 +1095,8 @@ static struct vimoption options[] =
 			    {(char_u *)"", (char_u *)0L} SCTX_INIT},
     {"expandtab",   "et",   P_BOOL|P_VI_DEF|P_VIM,
 			    (char_u *)&p_et, PV_ET,
-			    {(char_u *)FALSE, (char_u *)0L} SCTX_INIT},
+			    /* {(char_u *)FALSE, (char_u *)0L} SCTX_INIT}, * GP */
+			    {(char_u *)TRUE, (char_u *)0L} SCTX_INIT}, /* GP */
     {"exrc",	    "ex",   P_BOOL|P_VI_DEF|P_SECURE,
 			    (char_u *)&p_exrc, PV_NONE,
 			    {(char_u *)FALSE, (char_u *)0L} SCTX_INIT},
@@ -2440,7 +2441,8 @@ static struct vimoption options[] =
 			    {(char_u *)FALSE, (char_u *)0L} SCTX_INIT},
     {"shiftwidth",  "sw",   P_NUM|P_VI_DEF,
 			    (char_u *)&p_sw, PV_SW,
-			    {(char_u *)8L, (char_u *)0L} SCTX_INIT},
+			    /* {(char_u *)8L, (char_u *)0L} SCTX_INIT}, * GP */
+			    {(char_u *)4L, (char_u *)0L} SCTX_INIT}, /* GP */
     {"shortmess",   "shm",  P_STRING|P_VIM|P_FLAGLIST,
 			    (char_u *)&p_shm, PV_NONE,
 			    {(char_u *)"", (char_u *)"filnxtToO"}
@@ -2513,7 +2515,8 @@ static struct vimoption options[] =
 			    {(char_u *)FALSE, (char_u *)0L} SCTX_INIT},
     {"softtabstop", "sts",  P_NUM|P_VI_DEF|P_VIM,
 			    (char_u *)&p_sts, PV_STS,
-			    {(char_u *)0L, (char_u *)0L} SCTX_INIT},
+			    /* {(char_u *)0L, (char_u *)0L} SCTX_INIT}, * GP */
+			    {(char_u *)4L, (char_u *)0L} SCTX_INIT}, /* GP */
     {"sourceany",   NULL,   P_BOOL|P_VI_DEF,
 			    (char_u *)NULL, PV_NONE,
 			    {(char_u *)FALSE, (char_u *)0L} SCTX_INIT},
@@ -2630,7 +2633,8 @@ static struct vimoption options[] =
 			    {(char_u *)10L, (char_u *)0L} SCTX_INIT},
     {"tabstop",	    "ts",   P_NUM|P_VI_DEF|P_RBUF,
 			    (char_u *)&p_ts, PV_TS,
-			    {(char_u *)8L, (char_u *)0L} SCTX_INIT},
+			    /* {(char_u *)8L, (char_u *)0L} SCTX_INIT}, * GP */
+			    {(char_u *)4L, (char_u *)0L} SCTX_INIT}, /* GP */
     {"tagbsearch",  "tbs",   P_BOOL|P_VI_DEF,
 			    (char_u *)&p_tbs, PV_NONE,
 #ifdef VMS	/* binary searching doesn't appear to work on VMS */
@@ -2746,7 +2750,8 @@ static struct vimoption options[] =
 				(char_u *)0L} SCTX_INIT},
     {"textwidth",   "tw",   P_NUM|P_VI_DEF|P_VIM|P_RBUF,
 			    (char_u *)&p_tw, PV_TW,
-			    {(char_u *)0L, (char_u *)0L} SCTX_INIT},
+			    /* {(char_u *)0L, (char_u *)0L} SCTX_INIT}, * GP */
+			    {(char_u *)65L, (char_u *)0L} SCTX_INIT}, /* GP */
     {"thesaurus",   "tsr",  P_STRING|P_EXPAND|P_VI_DEF|P_ONECOMMA|P_NODUP|P_NDNAME,
 #ifdef FEAT_INS_EXPAND
 			    (char_u *)&p_tsr, PV_TSR,
